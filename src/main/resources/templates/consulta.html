@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>consulta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="StyleSheet" href="animal.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kreon&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="div2">
+
+
+    <br>
+    <A name="segundo"></A><font class="textT"><H1>CONSULTAR</H1></font>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th><th>Nombre</th><th>Tipo</th><th>Color</th><th>Fecha de Nac</th> <th>Raza</th><th>Tipo de pelaje</th><th>Vacunas</th><th>Estatus</th><th>Fotografía</th>
+        </tr>
+        <tr th:each="animales : ${ani}">
+            <td th:text="${animales.id}"></td>
+            <td th:text="${animales.nombre}"></td>
+            <td th:text="${animales.tipo}"></td>
+            <td th:text="${animales.color}"></td>
+            <td th:text="${animales.fechaNacimiento}"></td>
+            <td th:text="${animales.raza}"></td>
+            <td th:text="${animales.pelaje}"></td>
+            <td th:text="${animales.vacunas}"></td>
+            <td th:text="${animales.adopcion}"></td>
+        </thead>
+    </table>
+</div>
+
+</body>
+</html>
